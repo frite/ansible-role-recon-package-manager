@@ -1,6 +1,8 @@
 Role Name
 =========
 
+[![Build Status](https://travis-ci.com/frite/ansible-role-recon-package-manager.svg?branch=master)](https://travis-ci.com/frite/ansible-role-recon-package-manager)
+
 A role to handle package operations (i.e. prerequisites for tools etc.) for Recon.
 
 Requirements
