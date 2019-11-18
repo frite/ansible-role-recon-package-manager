@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: frite
-  role_name: recon_user
+  role_name: recon_package_manager
   description: Ansible role to handle packages for recon project.
   company: NaN
 

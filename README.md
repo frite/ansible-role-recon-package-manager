@@ -1,7 +1,7 @@
 Role Name
 =========
 
-ARole to handle package operations (i.e. prerequisites for tools etc.) for Recon. 
+A role to handle package operations (i.e. prerequisites for tools etc.) for Recon.
 
 Requirements
 ------------
@@ -12,19 +12,19 @@ Role Variables
 Depending on the OS, you are going to need to set different variables.
 
 For `apt` (i.e. Debian, Ubuntu, Debian-based), you need something like the following:
-``` 
+```
 apt_packages:
   - nmap
 ```
 
 For `yum` (i.e. CentOS 7), you need something like the following:
-``` 
+```
 yum_packages:
   - nmap
 ```
 
 For `dnf` (i.e. CentOS 8), you need something like the following:
-``` 
+```
 dnf_packages:
   - nmap
 ```
