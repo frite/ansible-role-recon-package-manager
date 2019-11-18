@@ -1,0 +1,59 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+  options:
+    config-file: molecule/default/yaml-lint.yml
+platforms:
+  - name: centos7
+    image: centos:7
+  - name: centos8
+    image: centos:8
+  - name: ubuntu1804
+    image: ubuntu:18.04
+  - name: ubuntu1910
+    image: ubuntu:19.10
+  - name: ubuntu1904
+    image: ubuntu:19.04
+  - name: ubuntu1604
+    image: ubuntu:16.04
+  - name: debian
+    image: debian:buster
+provisioner:
+  name: ansible
+  env:
+    ANSIBLE_ROLES_PATH: $HOME/.ansible/roles
+  lint:
+    name: ansible-lint
+  inventory:
+    host_vars:
+      centos7:
+        yum_packages:
+          - nmap
+      centos8:
+        dnf_packages:
+          - nmap
+      ubuntu1604:
+        apt_packages:
+          - nmap
+      ubuntu1804:
+        apt_packages:
+          - nmap
+      ubuntu1904:
+        apt_packages:
+          - nmap
+      ubuntu1910:
+        apt_packages:
+          - nmap
+      debian:
+        apt_packages:
+          - nmap
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

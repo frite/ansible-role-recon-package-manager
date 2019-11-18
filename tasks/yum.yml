@@ -1,0 +1,12 @@
+---
+- name: Yum Tasks - Upgrade all packages
+  yum:
+    name: '*'
+    state: present
+    update_cache: true
+
+- name: Yum Tasks - Install required packages
+  yum:
+    name: "{{ yum_packages }}"
+    state: present
+  when: yum_packages is defined

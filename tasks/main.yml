@@ -1,0 +1,3 @@
+---
+- name: Recon Wordlists - Include OS-Specific Tasks
+  include: "{{ ansible_pkg_mgr }}.yml"
