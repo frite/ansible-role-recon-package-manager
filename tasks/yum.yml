@@ -4,6 +4,7 @@
     name: '*'
     state: present
     update_cache: true
+  when: pkg_mgr_updates
 
 - name: Yum Tasks - Install required packages
   yum:

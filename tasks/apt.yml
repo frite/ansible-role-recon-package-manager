@@ -4,6 +4,7 @@
     upgrade: "yes"
     update_cache: true
     cache_valid_time: 604800  # 1 Week.
+  when: pkg_mgr_updates
 
 - name: Aptitude Tasks - Install required packages
   apt:
@@ -14,3 +15,4 @@
 - name: Aptitude Tasks - Remove dependencies that are no longer required
   apt:
     autoremove: true
+  when: pkg_mgr_autoremoves
