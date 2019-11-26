@@ -31,6 +31,13 @@ For `dnf` (i.e. CentOS 8), you need something like the following:
 dnf_packages:
   - nmap
 ```
+
+It won't autoupdate by default or autoremove packages by default.
+If you want this functionality, you need to 
+```
+pkg_mgr_updates: true # for updates
+pkg_mgr_autoremoves: true # to autoremove unneeded packages
+```
 Example Playbook
 ----------------
 
